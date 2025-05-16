@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Typography, Button, Dialog, DialogHeader, DialogBody, DialogFooter, Carousel } from '@material-tailwind/react';
 import { useTheme } from './ThemeContext';
-import { CodeBracketIcon, ArrowTopRightOnSquareIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { CodeBracketIcon, ArrowTopRightOnSquareIcon, XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 import flutter_onboarding1 from '../assets/anabe_flutter/onboarding1.jpg';
 import flutter_onboarding2 from '../assets/anabe_flutter/onboarding2.jpg';
@@ -329,6 +329,22 @@ export function ProjectsSection() {
                                                 ) : (
                                                     <Carousel
                                                         className="rounded-xl overflow-hidden"
+                                                        prevArrow={({ handlePrev }) => (
+                                                            <button
+                                                                onClick={handlePrev}
+                                                                className={`!absolute top-1/2 left-4 -translate-y-1/2 rounded-full p-2 ${darkMode ? 'bg-gray-700/80 hover:bg-gray-600' : 'bg-blue-600/70 hover:bg-blue-700'} shadow-md focus:outline-none`}
+                                                            >
+                                                                <ChevronLeftIcon className="h-6 w-6 text-white" />
+                                                            </button>
+                                                        )}
+                                                        nextArrow={({ handleNext }) => (
+                                                            <button
+                                                                onClick={handleNext}
+                                                                className={`!absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-2 ${darkMode ? 'bg-gray-700/80 hover:bg-gray-600' : 'bg-blue-600/70 hover:bg-blue-700'} shadow-md focus:outline-none`}
+                                                            >
+                                                                <ChevronRightIcon className="h-6 w-6 text-white" />
+                                                            </button>
+                                                        )}
                                                         navigation={({ setActiveIndex, activeIndex, length }) => (
                                                             <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                                                                 {new Array(length).fill("").map((_, i) => (

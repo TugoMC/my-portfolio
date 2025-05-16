@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
     Card,
     Typography,
@@ -15,16 +15,13 @@ import {
     BriefcaseIcon,
     AcademicCapIcon,
     EnvelopeIcon,
-    ArrowTopRightOnSquareIcon,
     MoonIcon,
     SunIcon,
     Bars3Icon,
     XMarkIcon,
 } from "@heroicons/react/24/solid";
 import { useTheme } from './ThemeContext';
-import gitPhoto from '../assets/images/github-svgrepo-com.svg';
-import linkPhoto from '../assets/images/linkedin-svgrepo-com.svg';
-import { GitBranchIcon, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export function SidebarWithSearch() {
     const { darkMode, toggleDarkMode } = useTheme();
@@ -93,7 +90,7 @@ export function SidebarWithSearch() {
     // Style pour l'élément actif
     const getListItemClass = (section) => {
         const baseClass = darkMode
-            ? 'transition-all duration-200 '
+            ? 'transition-all duration-200 text-white '
             : 'transition-all duration-200 ';
 
         const activeClass = darkMode
@@ -101,7 +98,7 @@ export function SidebarWithSearch() {
             : 'bg-blue-50 text-blue-700 font-medium border-l-4 border-blue-500';
 
         const hoverClass = darkMode
-            ? 'hover:bg-gray-800 focus:bg-gray-800'
+            ? 'hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white'
             : 'hover:bg-blue-50/50 focus:bg-blue-50/50';
 
         return `${baseClass} ${section === activeSection ? activeClass : hoverClass}`;
@@ -144,7 +141,7 @@ export function SidebarWithSearch() {
 
 
                     {/* Dark Mode Toggle */}
-                    <div className="px-4 pb-4 flex items-center justify-between mt-4">
+                    <div className="px-4 pb-4 flex items-center justify-between mt-16">
                         <div className="flex items-center gap-2">
                             {darkMode ?
                                 <MoonIcon className="h-5 w-5 text-blue-500" /> :
@@ -224,7 +221,7 @@ export function SidebarWithSearch() {
 
                         <hr className={`my-2 ${darkMode ? 'border-gray-700' : 'border-blue-gray-50'}`} />
 
-                        <ListItem className={darkMode ? 'hover:bg-gray-800 focus:bg-gray-800' : ''}>
+                        <ListItem className={darkMode ? 'hover:bg-gray-800 hover:text-white text-white' : ''}>
                             <ListItemPrefix>
                                 <Github className={`h-5 w-5 ${darkMode ? 'text-white' : ''}`} />
 
@@ -234,7 +231,7 @@ export function SidebarWithSearch() {
                             </a>
                         </ListItem>
 
-                        <ListItem className={darkMode ? 'hover:bg-gray-800 focus:bg-gray-800' : ''}>
+                        <ListItem className={darkMode ? 'hover:bg-gray-800 hover:text-white text-white' : ''}>
                             <ListItemPrefix>
                                 <Linkedin className={`h-5 w-5 ${darkMode ? 'text-white' : ''}`} />
 

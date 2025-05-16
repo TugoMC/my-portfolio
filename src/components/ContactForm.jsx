@@ -1,7 +1,6 @@
-import React from 'react';
 import { Input, Textarea, Button } from '@material-tailwind/react';
 import { Typography } from '@material-tailwind/react';
-import { EnvelopeIcon as MailIcon, PhoneIcon, MapIcon as MapPinIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon as MailIcon, MapIcon as MapPinIcon } from '@heroicons/react/24/outline';
 import { Linkedin, Github } from 'lucide-react';
 
 
@@ -54,7 +53,7 @@ export default function ContactForm({ darkMode }) {
                                 {/* LinkedIn */}
                                 <div className={`flex items-center gap-4 p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-800 hover:bg-gray-900' : 'bg-white hover:bg-gray-50 border border-gray-100'}`}>
                                     <div className={`w-12 h-12 rounded-full flex items-center justify-center ${darkMode ? 'bg-blue-900/30' : 'bg-blue-100'}`}>
-                                        <Linkedin className={`h-5 w-5 ${darkMode ? 'text-white' : ''}`} />
+                                        <Linkedin className={`h-5 w-5 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
                                     </div>
                                     <div>
                                         <Typography variant="small" className={`font-medium ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -76,9 +75,7 @@ export default function ContactForm({ darkMode }) {
                                 {/* GitHub */}
                                 <div className={`flex items-center gap-4 p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-800 hover:bg-gray-900' : 'bg-white hover:bg-gray-50 border border-gray-100'}`}>
                                     <div className={`w-12 h-12 rounded-full flex items-center justify-center ${darkMode ? 'bg-gray-900/60' : 'bg-gray-100'}`}>
-                                        <i className="fa-brands fa-github text-xl text-gray-700 dark:text-gray-300"></i>
-                                        <Github className={`h-5 w-5 ${darkMode ? 'text-white' : ''}`} />
-
+                                        <Github className={`h-5 w-5 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`} />
                                     </div>
                                     <div>
                                         <Typography variant="small" className={`font-medium ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -103,7 +100,7 @@ export default function ContactForm({ darkMode }) {
                     {/* Formulaire de contact */}
                     <div className="md:w-1/2">
                         <form
-                            action="https://formspree.io/f/myyyzzzz" // Remplacez par votre vrai endpoint Formspree
+                            action="https://formspree.io/f/xqaqnlgd"
                             method="POST"
                             className={`space-y-6 p-6 rounded-xl border-2 ${darkMode
                                 ? 'bg-gray-700 border-gray-600'
@@ -169,7 +166,7 @@ export default function ContactForm({ darkMode }) {
                                     color="blue"
                                     size="lg"
                                     rows={6}
-                                    placeholder="Parlez-moi de votre projet..."
+                                    placeholder="Bonjour,..."
                                     className={`${darkMode ? 'text-white' : ''} w-full`}
                                     labelProps={{
                                         className: darkMode ? "text-white" : "",
