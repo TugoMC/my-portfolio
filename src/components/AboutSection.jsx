@@ -7,11 +7,16 @@ const AboutSection = () => {
     const { darkMode } = useTheme();
 
     const handleDownloadCV = () => {
-        const CV_URL = "/assets/documents/cv_ouattara_junior.pdf";
+
+        const CV_URL = "/cv_ouattara_junior.pdf";
+
+        // Créer un lien temporaire pour le téléchargement
         const link = document.createElement('a');
         link.href = CV_URL;
-        link.setAttribute('download', 'cv_ouattara_junior.pdf');
-        link.setAttribute('target', '_blank');
+        link.download = 'cv_ouattara_junior.pdf'; // Nom du fichier téléchargé
+        link.style.display = 'none';
+
+        // Ajouter le lien au DOM, cliquer dessus, puis le supprimer
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
