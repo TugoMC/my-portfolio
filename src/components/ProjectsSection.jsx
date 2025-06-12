@@ -31,6 +31,54 @@ import flutter_communes from '../assets/anabe_flutter/section_toutes_les_commune
 import flutter_thumbnail from '../assets/anabe_flutter/project_1.png';
 
 
+
+import flotte_login from '../assets/gestion_flotte/login.png';
+import flotte_register from '../assets/gestion_flotte/register.png';
+import flotte_dashboard from '../assets/gestion_flotte/tableau_de_bord.png';
+
+import flotte_vehicules_form from '../assets/gestion_flotte/gestion_vehicule_formulaire.png';
+import flotte_vehicules from '../assets/gestion_flotte/gestion_vehicules.png';
+import flotte_vehicules_details from '../assets/gestion_flotte/vehicules_details.png';
+
+import flotte_chauffeurs from '../assets/gestion_flotte/gestion_chauffeurs.png';
+import flotte_chauffeurs_form from '../assets/gestion_flotte/gestion_chauffeurs_formulaire.png';
+import flotte_chauffeurs_details from '../assets/gestion_flotte/chauffeur_details.png';
+
+import flotte_plannings from '../assets/gestion_flotte/attribution_plannings.png';
+import flotte_plannings_form from '../assets/gestion_flotte/plannings_formulaire.png';
+
+import flotte_paiements from '../assets/gestion_flotte/gestion_paiements.png';
+import flotte_paiements_form from '../assets/gestion_flotte/paiements_formulaire.png';
+import flotte_paiements_details from '../assets/gestion_flotte/paiements_details.png';
+
+import flotte_maintenances from '../assets/gestion_flotte/gestion_maintenances.png';
+import flotte_maintenances_form from '../assets/gestion_flotte/maintenances_formulaire.png';
+import flotte_maintenances_details from '../assets/gestion_flotte/maintenances_details.png';
+
+import flotte_documents from '../assets/gestion_flotte/gestion_documents.png';
+import flotte_documents_form from '../assets/gestion_flotte/documents_formulaire.png';
+import flotte_documents_details from '../assets/gestion_flotte/documents_details.png';
+
+import flotte_notifications from '../assets/gestion_flotte/notifications1.png';
+import flotte_all_notifications from '../assets/gestion_flotte/toutes_les_notifications.png';
+
+import flotte_profile from '../assets/gestion_flotte/profil.png';
+
+import flotte_parametres from '../assets/gestion_flotte/parametres.png';
+
+import flotte_sidebar_admin from '../assets/gestion_flotte/sidebar_admin.png';
+import flotte_sidebar_manager from '../assets/gestion_flotte/sidebar_manager.png';
+import flotte_sidebar_chauffeur from '../assets/gestion_flotte/sidebar_chauffeur.png';
+
+import flotte_events from '../assets/gestion_flotte/tous_les_evenements.png';
+
+import flotte_interface_chauffeur from '../assets/gestion_flotte/page_personnelle_chauffeur.png';
+
+import flotte_logo from '../assets/gestion_flotte/flotte_logo.png';
+
+
+
+
 export function ProjectsSection() {
     const { darkMode } = useTheme();
     const [open, setOpen] = useState(false);
@@ -65,7 +113,7 @@ export function ProjectsSection() {
             description: "Application mobile développée avec Flutter permettant de référencer et découvrir des espaces évènementiels",
             technologies: ["Flutter", "Dart", "Firebase", "Firebase Firestore"],
             githubLink: "https://github.com/TugoMC/event_app",
-            demoLink: "",
+            demoLink: "https://drive.google.com/file/d/1jvy3M_yWpwMwcNUMsj61nr0OqAmOct3e/view?usp=sharing",
             image: flutter_thumbnail,
             sections: [
                 {
@@ -143,6 +191,155 @@ export function ProjectsSection() {
                 "Système d'avis et notation"
             ]
         },
+        {
+            id: 2,
+            title: "Gestion de Flottes",
+            description: "Application web développée avec React et Node.js permettant de gérer les flottes de véhicules.",
+            technologies: ["React", "ViteJS", "Node.js", "Express", "MongoDB", "Shadcn UI", "Tailwind CSS"],
+            githubLink: "https://github.com/TugoMC/flotte",
+            demoLink: "https://flotte.onrender.com/",
+            image: flotte_logo,
+            sections: [
+                {
+                    title: "Authentification",
+                    description: "Système d'authentification sécurisé",
+                    screenshots: [
+                        flotte_login,
+                        flotte_register,
+                    ]
+                },
+
+                {
+                    title: "Tableau de bord",
+                    description: "Vue d'ensemble des statistiques de la flotte",
+                    screenshots: [
+                        flotte_dashboard,
+                    ]
+
+                },
+
+                {
+                    title: "Gestion des véhicules",
+                    description: "Gestion des données des véhicules",
+                    screenshots: [
+                        flotte_vehicules,
+                        flotte_vehicules_form,
+                        flotte_vehicules_details,
+                    ]
+                },
+
+                {
+                    title: "Gestion des chauffeurs",
+                    description: "Gestion des données des chauffeurs",
+                    screenshots: [
+                        flotte_chauffeurs,
+                        flotte_chauffeurs_form,
+                        flotte_chauffeurs_details,
+
+                    ]
+                },
+
+                {
+                    title: "Gestion des plannings",
+                    description: "Gestion des plannings des chauffeurs",
+                    screenshots: [
+                        flotte_plannings,
+                        flotte_plannings_form,
+                    ]
+                },
+
+                {
+                    title: "Gestion des paiements",
+                    description: "Gestion des paiements des chauffeurs",
+                    screenshots: [
+                        flotte_paiements,
+                        flotte_paiements_form,
+                        flotte_paiements_details,
+                    ]
+                },
+
+                {
+                    title: "Gestion des maintenances",
+                    description: "Gestion des maintenances des véhicules",
+                    screenshots: [
+                        flotte_maintenances,
+                        flotte_maintenances_form,
+                        flotte_maintenances_details,
+                    ]
+                },
+
+                {
+                    title: "Gestion des documents et contrats",
+                    description: "Gestion des documents et contrats des chauffeurs et véhicules",
+                    screenshots: [
+                        flotte_documents,
+                        flotte_documents_form,
+                        flotte_documents_details,
+                    ]
+                },
+
+                {
+                    title: "Notifications et alertes",
+                    description: "Notifications et alertes pour les paiments en attente et les documents expirés",
+                    screenshots: [
+                        flotte_notifications,
+                        flotte_all_notifications,
+                    ]
+                },
+
+                {
+                    title: "Page de profil",
+                    description: "Page de profil utilisateur avec informations personnelles et options de gestion",
+                    screenshots: [
+                        flotte_profile,
+                    ]
+                }
+                ,
+                {
+                    title: "Paramètres",
+                    description: "Page de paramètres pour gérer les préférences de l'application",
+                    screenshots: [
+                        flotte_parametres,
+                    ]
+                },
+                {
+                    title: "Sidebars",
+                    description: "Barres latérales en fonction des rôles (administrateur, manager, chauffeur)",
+                    screenshots: [
+                        flotte_sidebar_admin,
+                        flotte_sidebar_manager,
+                        flotte_sidebar_chauffeur,
+                    ]
+                },
+
+                {
+                    title: "Historique des actions",
+                    description: "Historique des actions effectuées par l'utilisateur",
+                    screenshots: [
+                        flotte_events,
+                    ]
+                },
+
+                {
+                    title: "Interface pour les chauffeurs",
+                    description: "Interface dédiée aux chauffeurs pour visualiser leurs informations personnelles, plannings et paiements",
+                    screenshots: [
+                        flotte_interface_chauffeur,
+                    ]
+                }
+            ],
+            features: [
+                "Système d'authentification et gestion des utilisateurs",
+                "Tableau de bord pour visualiser les statistiques",
+                "Gestion des véhicules",
+                "Gestion des chauffeurs",
+                "Gestion des plannings",
+                "Gestion des paiements",
+                "Gestion des maintenances",
+                "Gestion des documents et contrats",
+                "Notifications et alertes pour les paiments en attente et les documents expirés",
+            ]
+        }
 
     ];
 
